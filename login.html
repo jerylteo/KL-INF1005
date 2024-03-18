@@ -10,13 +10,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
-  <header class="p-3 bg-header d-flex justify-content-between">
-    <div class="fs-6">logo</div>
-    <nav class="mx-3 space-evenly">
-      <a href="index.html" class="link-dark link-offset-2 mx-3 fs-6 fw-light link-underline-opacity-25 link-underline-opacity-100-hover">HOME</a>
-      <a href="catalogue.html" class="link-dark link-offset-2 mx-3 fs-6 fw-light link-underline-opacity-25 link-underline-opacity-100-hover">EVENTS</a>
-      <a href="login.html" class="link-dark link-offset-2 mx-3 fs-6 fw-normal link-underline-opacity-25 link-underline-opacity-100-hover">LOGIN</a>
-    </nav>
+  <header class="bg-header p-3">
+    <section class="container d-flex justify-content-between"">
+      <div class="fs-6"><p class="mb-0">INF1005</p></div>
+      <nav class="mx-3 space-evenly">
+        <a href="index.html" class="link-dark link-offset-2 mr-3 fs-6 fw-light link-underline-opacity-25 link-underline-opacity-100-hover">HOME</a>
+        <a href="catalogue.html" class="link-dark link-offset-2 mx-3 fs-6 fw-light link-underline-opacity-25 link-underline-opacity-100-hover">EVENTS</a>
+        <a href="login.html" class="link-dark link-offset-2 ml-3 fs-6 fw-normal link-underline-opacity-25 link-underline-opacity-100-hover">LOGIN</a>
+      </nav>
+      </section>  
   </header>
   <main class="container py-5">
     <h1 class="fs-1">Login</h1>
@@ -38,6 +40,45 @@
       <div class="col-12">
         <button type="submit" class="btn btn-primary">Login</button>
       </div>
+    </form>
+    <!-- or sign up -->
+    <p class="fs-6 mt-4">Don't have an account? <a data-bs-toggle="modal" data-bs-target="#signupModal" class="link-dark link-underline-opacity-25 link-underline-opacity-100-hover">Sign up</a></p>
+    <div id="signupModal" class="modal fade" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModal">Sign up</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="inputName">
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail">
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword">
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword2" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="inputPassword2">
+              </div>
+              <div class="col-12">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="p-3 bg-footer d-flex justify-content-center">
     <p class="fs-6 fw-light my-0">© 2021 INF1005</p>
