@@ -11,7 +11,7 @@
 </head>
 <body class="bg-light">
   <header class="bg-header navbar navbar-expand-md">
-    <section class="container-fluid">
+    <section class="container">
       <a href="index.html" class="navbar-brand">INF1005</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -19,13 +19,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-lg-0">
           <li class="nav-item">
-            <a href="index.html" class="nav-link" aria-current="page">HOME</a>
+            <a href="index.html" class="nav-link">HOME</a>
           </li>
           <li class="nav-item">
             <a href="about.html" class="nav-link">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a href="catalogue.html" class="nav-link active">EVENTS</a>
+            <a href="catalogue.html" class="nav-link active" aria-current="page">EVENTS</a>
+          </li>
+          <li class="nav-item">
+            <a href="faq.html" class="nav-link">FAQ</a>
           </li>
           <li class="nav-item">
             <a href="login.html" class="nav-link">LOGIN</a>
@@ -40,7 +43,7 @@
     <div class="row mt-4">
       <div class="col-md-6" id="event1">
         <div class="card">
-          <img src="./assets/images/vecteezy_family-gathering-outdoor_16389928.png" class="card-img-top" alt="...">
+          <img src="./assets/images/vecteezy_family-gathering-outdoor_16389928.png" class="card-img-top" alt="family">
           <div class="card-body">
             <h5 class="card-title">Event 1</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. </p>
@@ -57,10 +60,74 @@
             </div>
             <div class="modal-body">
               <div class="card">
-                <img src="./assets/images/vecteezy_family-gathering-outdoor_16389928.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Event 1</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. </p>
+                  <form action="bookEvent">
+                    <!-- 
+                      1. Type of Event (dropdown)
+                      2. Date (date)
+                      3. Catering (dropdown)
+                      4. Budget (dropdown range)
+                      5. Number of Guests (number)
+                     -->
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label for="eventType" class="form-label">Type of Event</label>
+                        <select class="form-select" id="eventType">
+                          <option selected value="virtual">Virtual</option>
+                          <option value="physical">Physical</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="event" class="form-label">Event</label>
+                        <select class="form-select" id="event">
+                          <option selected value="virtualescaperoom">Virtual Escape Room</option>
+                          <option value="virtualescaperoom">Virtual Scavenger Hunt</option>
+                          <option value="virtualescaperoom">Online Trivia</option>
+                          <option value="virtualescaperoom">Virtual Board Games</option>
+                          <option value="virtualescaperoom">Virtual Mindfulness Sessions</option>
+                          <option value="virtualescaperoom">Virtual Art</option>
+                          <option value="virtualescaperoom">Survival Skills Workshop</option>
+                          <option value="virtualescaperoom">Culinary Team Challenge</option>
+                          <option value="virtualescaperoom">Escape Room</option>
+                          <option value="virtualescaperoom">Bubble Soccer</option>
+                          <option value="virtualescaperoom">Paintball Park</option>
+                          <option value="virtualescaperoom">Graffiti Art Jam</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="eventDate" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="eventDate">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="catering" class="form-label">Catering</label>
+                        <select class="form-select" id="catering">
+                          <option selected value="0">None</option>
+                          <option value="1">Bento (2 Meat 1 Veg)</option>
+                          <option value="2">Bento (3 Meat 1 Veg)</option>
+                          <option value="3">Bento (1 Meat 3 Veg)</option>
+                          <option value="4">Catering Style</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="budget" class="form-label">Budget</label>
+                        <select class="form-select" id="budget">
+                          <option selected value="100">$100 - $200</option>
+                          <option value="200">$201 - $400</option>
+                          <option value="400">$401 - $600</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="guests" class="form-label">Number of Guests</label>
+                        <input type="number" class="form-control" id="guests">
+                      </div>
+                      <div class="col-md-12">
+                        <label for="remarks" class="form-label">Remarks</label>
+                        <input type="textbox" class="form-control" id="remarks">
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>

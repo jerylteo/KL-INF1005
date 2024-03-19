@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-lg-0">
           <li class="nav-item">
-            <a href="index.html" class="nav-link active" aria-current="page">HOME</a>
+            <a href="index.html" class="nav-link">HOME</a>
           </li>
           <li class="nav-item">
             <a href="about.html" class="nav-link">ABOUT</a>
@@ -28,20 +28,23 @@
             <a href="catalogue.html" class="nav-link">EVENTS</a>
           </li>
           <li class="nav-item">
-            <a href="login.html" class="nav-link">LOGIN</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link active" aria-current="page">LOGIN</a>
           </li>
         </ul>
       </div>
     </section>
   </header>
-  <main class="container py-5">
+  <main class="container w-75 py-5">
     <h1 class="fs-1">Login</h1>
     <form class="row g-3 mt-4">
-      <div class="col-md-6">
+      <div class="col-xl-6">
         <label for="inputEmail4" class="form-label">Email</label>
         <input type="email" class="form-control" id="inputEmail4">
       </div>
-      <div class="col-md-6">
+      <div class="col-xl-6">
         <label for="inputPassword4" class="form-label">Password</label>
         <input type="password" class="form-control" id="inputPassword4">
       </div>
@@ -51,12 +54,12 @@
           <label class="form-check-label" for="gridCheck">Remember me</label>
         </div>
       </div>
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary">Login</button>
+      <div class="col-12 mt-4">
+        <button type="submit" class="btn btn-primary w-25">Login</button>
       </div>
     </form>
     <!-- or sign up -->
-    <p class="fs-6 mt-4">Don't have an account? <a data-bs-toggle="modal" data-bs-target="#signupModal" class="link-dark link-underline-opacity-25 link-underline-opacity-100-hover">Sign up</a></p>
+    <p class="fs-6 mt-3">Don't have an account? <a data-bs-toggle="modal" data-bs-target="#signupModal" class="link-dark link-underline-opacity-25 link-offset-2 link-underline-opacity-100-hover">Sign up</a></p>
     <div id="signupModal" class="modal fade" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -66,36 +69,52 @@
           </div>
           <div class="modal-body">
             <form class="row g-3">
-              <div class="col-md-6">
-                <label for="inputName" class="form-label">Name</label>
-                <input type="text" class="form-control" id="inputName">
+              <div class="col-md-3">
+                <label for="salutation" class="form-label">Salutation</label>
+                <select id="salutation" class="form-select" required>
+                  <option selected disabled>Choose...</option>
+                  <option value="mr">Mr. </option>
+                  <option value="ms">Ms. </option>
+                  <option value="mrs">Mrs. </option>
+                  <option value="mdm">Mdm. </option>
+                </select> 
+              </div>
+              <div class="col-md-9">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="col-md-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              
+              <div class="col-md-12">
+                <!-- Gender -->
+                <label for="companyName" class="form-label">Company Name</label>
+                <input type="text" class="form-control" id="companyName" required>
               </div>
               <div class="col-md-6">
-                <label for="inputEmail" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required>
               </div>
               <div class="col-md-6">
-                <label for="inputPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword">
-              </div>
-              <div class="col-md-6">
-                <label for="inputPassword2" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="inputPassword2">
+                <label for="password2" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="password2" required>
               </div>
               <div class="col-12">
               </div>
             </form>
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer d-flex justify-content-between">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary">Sign up</button>
+            <button type="button" class="btn btn-primary w-50">Sign up</button>
           </div>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="p-3 bg-footer d-flex justify-content-center">
+  <footer class="p-3 bg-footer d-flex justify-content-center fixed-bottom">
     <p class="fs-6 fw-light my-0">© 2021 INF1005</p>
   </footer>
 
