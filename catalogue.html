@@ -10,15 +10,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
-  <header class="bg-header p-3">
-    <section class="container d-flex justify-content-between"">
-      <div class="fs-6"><p class="mb-0">INF1005</p></div>
-      <nav class="mx-3 space-evenly">
-        <a href="index.html" class="link-dark link-offset-2 mr-3 fs-6 fw-light link-underline-opacity-25 link-underline-opacity-100-hover">HOME</a>
-        <a href="catalogue.html" class="link-dark link-offset-2 mx-3 fs-6 fw-normal link-underline-opacity-25 link-underline-opacity-100-hover">EVENTS</a>
-        <a href="login.html" class="link-dark link-offset-2 ml-3 fs-6 fw-light link-underline-opacity-25 link-underline-opacity-100-hover">LOGIN</a>
-      </nav>
-    </section>  
+  <header class="bg-header navbar navbar-expand-md">
+    <section class="container-fluid">
+      <a href="index.html" class="navbar-brand">INF1005</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-lg-0">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" aria-current="page">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a href="catalogue.html" class="nav-link active">EVENTS</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">LOGIN</a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </header>
   <main class="container py-5">
     <h1 class="fs-1">Events</h1>
